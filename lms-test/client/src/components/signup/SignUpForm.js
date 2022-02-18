@@ -8,7 +8,7 @@ function SignUpForm() {
                 <div className='form-title'>
                     <h4>Set Up Your Admin Account for your Organisation</h4>
                     <div className='form-sub-title'>
-                        <h5>Organisation already registered?<a>Log in</a></h5>
+                        <h1>Organisation already registered?<a>Log in</a></h1>
                     </div>
                 </div>
 
