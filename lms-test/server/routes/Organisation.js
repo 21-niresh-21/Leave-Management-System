@@ -4,12 +4,12 @@ const router = express.Router();
 const { Organisation } = require("../models");
 const bcrypt = require("bcrypt");
 
-router.get("/signup", async (req, res) => {
+router.get("/", async (req, res) => {
   const organisation = await Organisation.findAll();
   res.json(organisation);
 });
 
-router.post("/signup",  (req, res) => {
+router.post("/",  (req, res) => {
   const organisation = req.body;
   const password = organisation.password;
   bcrypt.hash(password, 10).then((hash) => {
