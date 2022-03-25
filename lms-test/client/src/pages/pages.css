@@ -1,0 +1,22 @@
+.root-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.top-div-container{
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+}
+
+.bottom-div-container{
+    flex: 1;
+}
+
+.top-left-div{
+    flex: 2;
+}
+
+.top-right-div{
+    flex:1;
+}

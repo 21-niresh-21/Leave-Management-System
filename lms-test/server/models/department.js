@@ -1,11 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
-  const country = sequelize.define(
-    "country",
+  const department = sequelize.define(
+    "department",
     {
-      countryName: {
+      departmentName: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
+        unique: "uniqueDepartment",
       },
     },
     {
@@ -13,5 +13,5 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return country;
+  return department;
 };
