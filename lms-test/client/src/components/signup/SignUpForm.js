@@ -104,17 +104,19 @@ function SignUpForm() {
 
         <div className="form-inputs">
           <div className="name-container">
-            <label>Organisation name</label>
+            <label for='name'>Organisation name</label>
             <input
               onChange={(e) => {
                 setFormData({ ...formData, organisationName: e.target.value });
               }}
               type="text"
+              name="name"
+              id="name"
               value={formData.organisationName}
             />
           </div>
           <div className="domain-container">
-            <label>Domain name</label>
+            <label for='domainName'>Domain name</label>
             <input
               onChange={(e) => {
                 setFormData({
@@ -123,11 +125,13 @@ function SignUpForm() {
                 });
               }}
               type="text"
+              name="domainName"
+              id="domainName"
               value={formData.organisationDomain}
             />
           </div>
           <div className="domain-container">
-            <label>established Year</label>
+            <label for='year'>established Year</label>
             <input
               onChange={(e) => {
                 setFormData({
@@ -136,31 +140,37 @@ function SignUpForm() {
                 });
               }}
               type="number"
+              name="year"
+              id="year"
               value={formData.establishedYear}
             />
           </div>
           <div className="domain-container">
-            <label>address1</label>
+            <label for='address1'>address1</label>
             <input
               onChange={(e) => {
                 setFormData({ ...formData, address1: e.target.value });
               }}
               type="text"
+              name="address1"
+              id="address1"
               value={formData.address1}
             />
           </div>
           <div className="domain-container">
-            <label>address2</label>
+            <label for='address2'>address2</label>
             <input
               onChange={(e) => {
                 setFormData({ ...formData, address2: e.target.value });
               }}
               type="text"
+              name="address2"
+              id="address2"
               value={formData.address2}
             />
           </div>
           <div className="state-container">
-            <label>State</label>
+            <label for='state'>State</label>
             <select
               onChange={(e) => {
                 setFormData({
@@ -168,15 +178,17 @@ function SignUpForm() {
                   stateID: mappedState[e.target.value],
                 });
               }}
+              name='state'
+              id="state"
             >
               {onStates &&
                 states.map((item) => {
-                  return <option key={item.stateName}>{item.stateName}</option>;
+                  return <option key={item.stateName} value={item.itemName}>{item.stateName}</option>;
                 })}
             </select>
           </div>
           <div className="country-container">
-            <label>Country</label>
+            <label for='country'>Country</label>
             <select
               onChange={(e) => {
                   setFormData({
@@ -185,27 +197,31 @@ function SignUpForm() {
                   }) &&
                   console.log(formData);
               }}
+              value='country'
+              id="country"
             >
               {onCountries &&
                 countries.map((item) => {
                   return (
-                    <option key={item.countryName}>{item.countryName}</option>
+                    <option key={item.countryName} value={item.countryName}>{item.countryName}</option>
                   );
                 })}
             </select>
           </div>
           <div className="pincode-container">
-            <label>Pincode</label>
+            <label for='pincode'>Pincode</label>
             <input
               onChange={(e) => {
                 setFormData({ ...formData, pinCode: parseInt(e.target.value) });
               }}
               type="number"
+              name="pincode"
+              id="pincode"
               value={formData.pinCode}
             />
           </div>
           <div className="phone-container">
-            <label>Phone number</label>
+            <label for='phone'>Phone number</label>
             <input
               onChange={(e) => {
                 setFormData({
@@ -214,26 +230,32 @@ function SignUpForm() {
                 });
               }}
               type="number"
+              name="phone"
+              id="phone"
               value={formData.phoneNumber}
             />
           </div>
           <div className="email-container">
-            <label>Organisation mail</label>
+            <label for='email'>Organisation mail</label>
             <input
               onChange={(e) => {
                 setFormData({ ...formData, mailID: e.target.value });
               }}
               type="text"
+              name="email"
+              id="email"
               value={formData.mailID}
             />
           </div>
           <div className="password-container">
-            <label>Password</label>
+            <label for='password'>Password</label>
             <input
               onChange={(e) => {
                 setFormData({ ...formData, password: e.target.value });
               }}
               type="text"
+              id="password"
+              name="password"
               value={formData.password}
             />
           </div>
